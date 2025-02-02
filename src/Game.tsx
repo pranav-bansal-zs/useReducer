@@ -1,7 +1,7 @@
 import  { useReducer, useState } from "react";
 import './Game.css'
 const Game = () => {
-  const [reducerFunction, setReducerFunction] = useState();
+  const [reducerFunction, setReducerFunction] = useState<any>();
   const [reducer, setReducer] = useState<((state: boolean, action: { type: string }) => boolean) | null>(null);
   const [error, setError] = useState<string>("");
   const [simpsonsfree, dispatch] = useReducer(reducer ?? (() => false), false);
