@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Gloria+Hallelujah&family=Indie+Flower&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+  background-color:rgb(228, 228, 228);
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Noto Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  .app-container {
+    padding: 10px;
+  }
+}
+
+.main-heading {
+  font-size: 36px;
+  font-weight: bold;
+  color: #1F487E;
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.heading-introduction { color: #1B3C73; }
+.heading-master { color: #105652; }
+.heading-syntax { color: #144272; }
+.heading-vs { color: #2E79BA; }
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin: 10px 0;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #F8CB2E;
+}
+
+.syntax-image {
+  width: 95%;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  background: linear-gradient(135deg, #118A7E, #2E79BA);
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  margin: 15px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #2E79BA, #118A7E);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .main-heading {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}

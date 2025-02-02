@@ -1,0 +1,87 @@
+.game-container {
+    background: white;
+    width: 90%;
+    max-width: 900px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem auto;
+}
+
+.game-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.game-instructions {
+    flex: 1.2;
+    min-width: 300px;
+}
+
+.game-visual {
+    flex: 1;
+    position: relative;
+    max-width: 350px; 
+    margin-top: 1rem;
+}
+
+textarea {
+    width: 90%;
+    height: 200px;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 1.2rem;
+    resize: vertical;
+    margin-bottom: 1rem;
+}
+
+.game-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.game-controls {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.game-controls button {
+    margin: 0;
+    flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+    .game-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .game-visual {
+        max-width: 100%;
+        order: -1;
+        margin-top: 0;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    .game-container {
+        padding: 1rem;
+        max-width: 95%;
+    }
+}
+
+.error-message {
+    color: #dc3545;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    width: 100%;
+}
