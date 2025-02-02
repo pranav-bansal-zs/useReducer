@@ -1,5 +1,5 @@
-import React, { useReducer, useState } from "react";
-import { userReducer } from "./userReducer";
+import { useReducer, useState } from "react";
+import { userReducer } from "./userReducer.tsx";
 import "./implementation.css";
 
 interface UserState {
@@ -36,15 +36,17 @@ const Implementation = () => {
 
   const handleUndo = () => {
     if (historyIndex >= 0) {
-      dispatch({ type: "UNDO", payload: history[historyIndex].state });
+      const previousState = history[historyIndex].state;
       setHistoryIndex(historyIndex - 1);
+      dispatch({ type: "UNDO", payload: previousState });
     }
   };
 
   const handleRedo = () => {
     if (historyIndex < history.length - 1) {
-      dispatch({ type: "REDO", payload: history[historyIndex + 1].state });
+      const nextState = history[historyIndex + 1].state;
       setHistoryIndex(historyIndex + 1);
+      dispatch({ type: "REDO", payload: nextState });
     }
   };
 

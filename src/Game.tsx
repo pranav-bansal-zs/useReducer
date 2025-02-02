@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import  { useReducer, useState } from "react";
 import './Game.css'
 const Game = () => {
   const [reducerFunction, setReducerFunction] = useState();
