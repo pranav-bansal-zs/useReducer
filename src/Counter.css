@@ -1,7 +1,7 @@
 .counter-container {
     text-align: center;
     padding: 20px;
-    background: white;
+    background:linear-gradient(to top, #f6f6f6 0%, #f1f3f6 100%);
     width:70%;
     margin: auto;
     border-radius: 10px;
@@ -16,3 +16,4 @@
   button:hover {
     background-color: #0056b3;
   }
+

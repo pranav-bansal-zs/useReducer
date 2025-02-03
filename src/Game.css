@@ -1,5 +1,5 @@
 .game-container {
-    background: white;
+    background:   linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
     width: 90%;
     max-width: 900px;
     padding: 1.5rem;
