@@ -1,5 +1,9 @@
 import  { useReducer, useState } from "react";
 import './Game.css'
+import { TbCircleNumber1Filled } from "react-icons/tb";
+import { TbCircleNumber2Filled } from "react-icons/tb";
+import { TbCircleNumber3Filled } from "react-icons/tb";
+import { TbCircleNumber4Filled } from "react-icons/tb";
 const Game = () => {
   const [reducerFunction, setReducerFunction] = useState<any>();
   const [reducer, setReducer] = useState<((state: boolean, action: { type: string }) => boolean) | null>(null);
@@ -27,10 +31,10 @@ const Game = () => {
         <div className="game-instructions">
           <h3>Task: Free the Simpsons from Prison.</h3>
           <h4>Instructions:</h4>
-          <p>1️⃣ Simpsons can only be freed if the simpsonsfree state is set to true. By default, it is false.</p>
-          <p>2️⃣ Write a reducer function that updates the simpsonsfree state to true.</p>
-          <p>3️⃣ Dispatch action type should be named "FREE".</p>
-          <p>4️⃣ Just complete the function body, no need to give it a name.</p>
+          <p><TbCircleNumber1Filled style={{fontSize:'1.3rem'}}/>  Simpsons can only be freed if the simpsonsfree state is set to true. By default, it is false.</p>
+          <p><TbCircleNumber2Filled style={{fontSize:'1.3rem'}}/>  Write a reducer function that updates the simpsonsfree state to true.</p>
+          <p><TbCircleNumber3Filled style={{fontSize:'1.3rem'}}/>  Dispatch action type should be named "FREE".</p>
+          <p><TbCircleNumber4Filled style={{fontSize:'1.3rem'}}/>  Just complete the function body, no need to give it a name.</p>
 
           <textarea
             onChange={(e) => setReducerFunction(e.target.value)}

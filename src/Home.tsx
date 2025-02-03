@@ -29,15 +29,13 @@ const Home = () => {
         heading={"Introduction"}
         headingcolor={"#1B3C73"}
         children={
+          <>
           <p style={{ color: "#0A97B0", fontWeight: "bold" }}>
-            🚀 A React hook for managing complex state logic, particularly when:
-            <br />
-            <TbCircleNumber1Filled style={{fontSize:'1.3rem'}}/> State transitions depend on previous values
-            <br />
-            <TbCircleNumber2Filled style={{fontSize:'1.3rem'}}/> Multiple state values are interdependent
-            <br />
-            <TbCircleNumber3Filled style={{fontSize:'1.3rem'}}/> Logic involves non-trivial updates
-          </p>
+            🚀 A React hook for managing complex state logic, particularly when:</p>
+            <p><TbCircleNumber1Filled style={{fontSize:'1.3rem'}}/> State transitions depend on previous values</p>
+            <p><TbCircleNumber2Filled style={{fontSize:'1.3rem'}}/> Multiple state values are interdependent</p>
+            <p><TbCircleNumber3Filled style={{fontSize:'1.3rem'}}/> Logic involves non-trivial updates</p>
+          </>
         }
       />
 
