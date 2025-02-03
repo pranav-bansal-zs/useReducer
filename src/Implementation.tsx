@@ -1,6 +1,8 @@
 import { useReducer, useState } from "react";
 import { userReducer } from "./userReducer.tsx";
 import "./implementation.css";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 interface UserState {
   name: string;
@@ -99,9 +101,8 @@ const Implementation = () => {
       </button>
 
       {showCode && (
-        <code className="code-block">
-          {`
-const userReducer = (state, action) => {
+  <SyntaxHighlighter language="tsx" style={dark}>
+  {`const userReducer = (state: UserState, action: Action): UserState => {
   switch (action.type) {
     case "UPDATE_NAME":
       return { ...state, name: action.payload };
@@ -109,16 +110,12 @@ const userReducer = (state, action) => {
       return { ...state, age: action.payload };
     case "UPDATE_EMAIL":
       return { ...state, email: action.payload };
-    case "UNDO":
-    case "REDO":
-      return action.payload;
     default:
       return state;
   }
-};
-`}
-        </code>
-      )}
+};`}
+</SyntaxHighlighter>
+)}
     </div>
   );
 };

@@ -23,8 +23,8 @@
   .syntax-image{
     width: 90%;
   }
-  .codeimage{
-    width: 80%;
+  .code-container{
+    width: 100%;
   }
   .children1{
     display: flex;
@@ -39,5 +39,14 @@
     
     button {
       width: auto;
+    }
+    .code-container{
+      font-size: 0.7rem;
+    }
+  }
+
+  @media (max-width:500px){
+    .code-container{
+      font-size:0.5rem;
     }
   }

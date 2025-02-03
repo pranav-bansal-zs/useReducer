@@ -7,10 +7,9 @@
     border-radius: 10px;
     box-shadow: -9px 18px 8px rgba(0, 0, 0,0.3);
     filter: blur(1.6);
-    opacity: 0.8;
   }
   .main-container:hover{
-    scale: 1.1;
+    scale: 1.03;
     transition: 0.5s;
   }
   

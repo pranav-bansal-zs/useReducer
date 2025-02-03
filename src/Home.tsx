@@ -8,11 +8,60 @@ import { TbCircleNumber1Filled } from "react-icons/tb";
 import { TbCircleNumber2Filled } from "react-icons/tb";
 import { TbCircleNumber3Filled } from "react-icons/tb";
 import { TbCircleNumber4Filled } from "react-icons/tb";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const Home = () => {
+  const code = `
+interface State {
+  count: number;
+  }
+    
+  interface Action {
+    type: "INCREMENT" | "DECREMENT" | "RESET";
+  }
+    
+  const initialState: State = { count: 0 };
+    
+  const counterReducer = (state: State, action: Action): State => {
+    switch (action.type) {
+      case "INCREMENT":
+          return { count: state.count + 1 };
+        case "DECREMENT":
+          return { count: state.count - 1 };
+        case "RESET":
+          return initialState;
+        default:
+          return state;
+      }
+    };
+    
+  const Counter=() => {
+  const [state, dispatch] = useReducer(counterReducer, initialState);
+    
+  eturn (
+    <div className="counter-container">
+      <h2>Counter: {state.count}</h2>
+        <div className="buttons">
+        <button onClick={() => dispatch({ type: "INCREMENT" })}>
+        <IoMdAdd style={{fontSize:"1.5rem"}} />
+        </button>
+        <button onClick={() => dispatch({ type: "DECREMENT" })}>
+        <RiSubtractFill style={{fontSize:"1.5rem"}} />
+        </button>
+        <button onClick={() => dispatch({ type: "RESET" })}>
+        <RiResetLeftFill style={{fontSize:"1.5rem"}} />
+        </button>
+      </div>
+    </div>
+  );
+};
+    
+export default Counter;
+    `;
   const [implementation, setImplementation] = useState<boolean>(false);
   const [game, setGame] = useState<boolean>(false);
-  const [showimage,setShowimage]=useState<boolean>(false);
+  const [showcode,setShowcode]=useState<boolean>(false);
 
   function handleclick() {
     setImplementation((prev) => !prev);
@@ -97,10 +146,16 @@ const Home = () => {
       <Heading heading={"Example"} headingcolor={"#1B3C73"} children={
         <div className="children1">
         <Counter />
-        <button  onClick={() => setShowimage((prev) => !prev)}>
-        {showimage ? "Hide Code" : "Show Code"}
+        <button  onClick={() => setShowcode((prev) => !prev)}>
+        {showcode ? "Hide Code" : "Show Code"}
       </button>
-        {showimage&&(<img src="code.png" className="codeimage"></img>)}
+      <div className="code-container">
+      {showcode &&(
+            <SyntaxHighlighter language="tsx" style={dark}>
+            {code}
+          </SyntaxHighlighter>
+        )}
+      </div>
         </div>
       }/>
       <button onClick={handleclick}>
