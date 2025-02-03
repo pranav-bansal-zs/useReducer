@@ -1,4 +1,8 @@
 import { useReducer } from "react";
+import { IoMdAdd } from "react-icons/io";
+import { RiSubtractFill } from "react-icons/ri";
+import { RiResetLeftFill } from "react-icons/ri";
+
 import './Counter.css'
 interface State {
   count: number;
@@ -30,9 +34,9 @@ const Counter=() => {
     <div className="counter-container">
       <h2>Counter: {state.count}</h2>
       <div className="buttons">
-        <button onClick={() => dispatch({ type: "INCREMENT" })}>Increment</button>
-        <button onClick={() => dispatch({ type: "DECREMENT" })}>Decrement</button>
-        <button onClick={() => dispatch({ type: "RESET" })}>Reset</button>
+        <button onClick={() => dispatch({ type: "INCREMENT" })}><IoMdAdd style={{fontSize:"1.5rem"}} /></button>
+        <button onClick={() => dispatch({ type: "DECREMENT" })}><RiSubtractFill style={{fontSize:"1.5rem"}} /></button>
+        <button onClick={() => dispatch({ type: "RESET" })}><RiResetLeftFill style={{fontSize:"1.5rem"}} /></button>
       </div>
     </div>
   );
