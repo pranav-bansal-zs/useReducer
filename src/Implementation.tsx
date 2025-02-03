@@ -99,7 +99,7 @@ const Implementation = () => {
       </button>
 
       {showCode && (
-        <pre className="code-block">
+        <code className="code-block">
           {`
 const userReducer = (state, action) => {
   switch (action.type) {
@@ -117,7 +117,7 @@ const userReducer = (state, action) => {
   }
 };
 `}
-        </pre>
+        </code>
       )}
     </div>
   );

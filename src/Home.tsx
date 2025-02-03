@@ -95,13 +95,13 @@ const Home = () => {
         }
       />
       <Heading heading={"Example"} headingcolor={"#1B3C73"} children={
-        <>
-        <Counter/>
+        <div className="children1">
+        <Counter />
         <button  onClick={() => setShowimage((prev) => !prev)}>
         {showimage ? "Hide Code" : "Show Code"}
       </button>
         {showimage&&(<img src="code.png" className="codeimage"></img>)}
-        </>
+        </div>
       }/>
       <button onClick={handleclick}>
         Implementation
